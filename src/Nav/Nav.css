@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.link {
+    padding-left: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
