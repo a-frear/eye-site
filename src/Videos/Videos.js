@@ -1,19 +1,37 @@
-import React,{useState} from 'react'
-import '../../node_modules/react-modal-video/scss/modal-video.scss'
+import React from 'react'
 import './Videos.css'
-import Eye1 from '../eye-videos/Eye1'
-import Eye2 from '../eye-videos/Eye2'
-import Eye3 from '../eye-videos/Eye3'
-import Eye4 from '../eye-videos/Eye4'
-import Eye5 from '../eye-videos/Eye5'
-import Eye6 from '../eye-videos/Eye6'
-import Eye7 from '../eye-videos/Eye7'
-import Eye8 from '../eye-videos/Eye8'
+import Modals from '../Modals/Modals'
+import vidData from '../vidData'
+
  
 class Enter extends React.Component {
-    render () {
+
+
+render() {
+  return (
+    <div>
+      <ul className='BookmarkList__list' aria-live='polite'>
+          {vidData.map(video =>
+            <Modals
+              key={video.id}
+              vidId={video.id}
+              eyeArt={video.eye}
+              altText={video.title}
+            />
+          )}
+        </ul>
+    </div>
+  
+)
+}
+}
+    
+  
+ { /*render () {
       return (
       <div className='eyes'>
+
+
         <Eye1 />
         <Eye2 />
         <Eye3 />
@@ -21,10 +39,10 @@ class Enter extends React.Component {
         <Eye5 />
         <Eye6 />
         <Eye7 />
-        <Eye8 />
+      <Eye8 />
       </div>
        
     )}
-}
+}*/}
 
 export default Enter;
