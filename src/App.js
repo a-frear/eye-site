@@ -22,14 +22,15 @@ class App extends React.Component {
         <Route
               path='/videos'
               component={Videos}/>
-        <Link to={'/'}>
-          <img src={eyeSiteLogo} alt='Eye Site Logo' className='logo' />
-        </Link>
-        <Route
+         <Route
               exact path = '/'
               component={App}>
                 <img src={rachelScreenshot} className='intro-image'/>
               </Route>
+        <Link to={'/'}>
+          <img src={eyeSiteLogo} alt='Eye Site Logo' className='logo' />
+        </Link>
+       
         </section>
        
       </div>
