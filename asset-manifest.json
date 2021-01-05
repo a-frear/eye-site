@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/eye-site/static/css/main.4d0d1317.chunk.css",
+    "main.js": "/eye-site/static/js/main.fcd2ad15.chunk.js",
+    "main.js.map": "/eye-site/static/js/main.fcd2ad15.chunk.js.map",
+    "runtime-main.js": "/eye-site/static/js/runtime-main.7eb12a1a.js",
+    "runtime-main.js.map": "/eye-site/static/js/runtime-main.7eb12a1a.js.map",
+    "static/css/2.6f2a3f92.chunk.css": "/eye-site/static/css/2.6f2a3f92.chunk.css",
+    "static/js/2.943076c1.chunk.js": "/eye-site/static/js/2.943076c1.chunk.js",
+    "static/js/2.943076c1.chunk.js.map": "/eye-site/static/js/2.943076c1.chunk.js.map",
+    "static/js/3.74ac95e0.chunk.js": "/eye-site/static/js/3.74ac95e0.chunk.js",
+    "static/js/3.74ac95e0.chunk.js.map": "/eye-site/static/js/3.74ac95e0.chunk.js.map",
+    "index.html": "/eye-site/index.html",
+    "static/css/2.6f2a3f92.chunk.css.map": "/eye-site/static/css/2.6f2a3f92.chunk.css.map",
+    "static/css/main.4d0d1317.chunk.css.map": "/eye-site/static/css/main.4d0d1317.chunk.css.map",
+    "static/js/2.943076c1.chunk.js.LICENSE.txt": "/eye-site/static/js/2.943076c1.chunk.js.LICENSE.txt",
+    "static/media/asset-1.3c0c9bcd.png": "/eye-site/static/media/asset-1.3c0c9bcd.png",
+    "static/media/asset-2.49c2854c.png": "/eye-site/static/media/asset-2.49c2854c.png",
+    "static/media/asset-4.bf80a3dd.png": "/eye-site/static/media/asset-4.bf80a3dd.png",
+    "static/media/asset-5.e415cf48.png": "/eye-site/static/media/asset-5.e415cf48.png",
+    "static/media/asset-6.afafb061.png": "/eye-site/static/media/asset-6.afafb061.png",
+    "static/media/asset-7.b00170e6.png": "/eye-site/static/media/asset-7.b00170e6.png",
+    "static/media/rachel-screenshot.a157deb0.png": "/eye-site/static/media/rachel-screenshot.a157deb0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7eb12a1a.js",
+    "static/css/2.6f2a3f92.chunk.css",
+    "static/js/2.943076c1.chunk.js",
+    "static/css/main.4d0d1317.chunk.css",
+    "static/js/main.fcd2ad15.chunk.js"
+  ]
+}
