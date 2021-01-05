@@ -14,7 +14,7 @@ export default function Nav(props) {
         Why
       </Link>
       {' '}
-      <Link to={'/'} className='link'>
+      <Link to={'/contact'} className='link'>
         Contact
       </Link>
     </nav>

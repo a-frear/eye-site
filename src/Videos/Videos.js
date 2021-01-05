@@ -9,7 +9,7 @@ class Enter extends React.Component {
 
 render() {
   return (
-    <div>
+    <div className='eyes'>
       <ul className='BookmarkList__list' aria-live='polite'>
           {vidData.map(video =>
             <Modals
@@ -25,24 +25,5 @@ render() {
 )
 }
 }
-    
-  
- { /*render () {
-      return (
-      <div className='eyes'>
-
-
-        <Eye1 />
-        <Eye2 />
-        <Eye3 />
-        <Eye4 />
-        <Eye5 />
-        <Eye6 />
-        <Eye7 />
-      <Eye8 />
-      </div>
-       
-    )}
-}*/}
 
 export default Enter;
