@@ -13,6 +13,9 @@ class App extends React.Component {
     render () {
       return (
       <div>
+        <header>
+        <title>Eye Site</title>
+        </header>
         <Nav />
         <section>
         <Route
