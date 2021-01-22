@@ -1,21 +1,26 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Nav.css'
 
 export default function Nav(props) {
   return (
     <nav className='Nav'>
-      <Link to={'/videos'} className='link'>
-        Videos
+       <Link to={'/'} className='link'>
+        VIDEOS
+      </Link>
+      <Link to={'/about'} className='link'>
+        WHY
       </Link>
       {' '}
-      {' '}
-      <Link to={'/about'} className='link'>
-        Why
+      <Link to={'/submit'} className='link'>
+        SUBMIT
       </Link>
       {' '}
       <Link to={'/contact'} className='link'>
-        Contact
+        CONTACT
+      </Link>
+      <Link to={'/login'} className='link'>
+        LOG IN
       </Link>
     </nav>
   );

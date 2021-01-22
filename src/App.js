@@ -6,37 +6,44 @@ import './App.css'
 import Videos from './Videos/Videos'
 import About from './About/About'
 import Contact from './Contact/Contact'
-import eyeSiteLogo from './img/eyesite3.png'
-import rachelScreenshot from './img/rachel-screenshot.png'
- 
+import eyeSiteTitle from './img/eye-site-title-hi-res.png'
+import Login from './Login/Login'
+import CreateAccount from './CreateAccount/CreateAccount'
+import Submit from './Submit/Submit'
+
 class App extends React.Component {
     render () {
       return (
-      <div>
+        <div>
         <header>
-        <title>Eye Site</title>
+        <title>EYE SITE</title>
         </header>
-        <Nav />
         <section>
+        <Nav />
         <Route
               path='/about'
               component={About}/>
         <Route
-              path='/videos'
+              exact path='/'
               component={Videos}/>
-         <Route
-              exact path = '/'
-              component={App}>
-                <img src={rachelScreenshot} className='intro-image'/>
-              </Route>
-              <Route
-              path = '/contact'
-              component={Contact}/>
-        <Link to={'/'}>
-          <img src={eyeSiteLogo} alt='Eye Site Logo' className='logo' />
-        </Link>
+        <Route
+        path = '/login'
+        component={Login}/>
+        <Route
+        path = '/create-account'
+        component={CreateAccount}/>
+        <Route
+        path = '/submit'
+        component={Submit}/>
+        <Route
+        path = '/contact'
+        component={Contact}/>
         </section>
-       
+        <section className='footer'>
+        <div>
+        <Link to={'/'}><img src={eyeSiteTitle} alt="Eye Site" className='title-img' /></Link>
+        </div>
+        </section>
       </div>
        
     )}

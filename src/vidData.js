@@ -6,6 +6,11 @@ import eye5 from './img/asset-5.png'
 import eye6 from './img/asset-6.png'
 import eye7 from './img/asset-7.png'
 import eye8 from './img/asset-8.png'
+import eye9 from './img/asset-9.png'
+import eye10 from './img/asset-10.png'
+import eye11 from './img/asset-11.png'
+import eye12 from './img/asset-12.png'
+import eye13 from './img/asset-13.png'
 
 const vidData = [
     {
@@ -39,8 +44,8 @@ const vidData = [
         eye: eye5
     },
     {
-        title: "eye site teasers",
-        author: "Amy Frear",
+        title: "EYE SITE PROMO",
+        author: "Matthew Ober",
         id: "dxU6G88Htkc",
         eye: eye6
     },
@@ -56,6 +61,37 @@ const vidData = [
         id: "5GVBZjn_aHY",
         eye: eye8
     },
+    {
+        title: "eye just can't right now",
+        author: "Amy Frear",
+        id: "42mNrSHO_nQ",
+        eye: eye9
+    },
+    {
+        title: "staring contest #1",
+        author: "Amy Frear",
+        id: "N31Zr0Vjx5w",
+        eye: eye10
+    },
+    {
+        title: "eye experiments",
+        author: "Matthew Ober",
+        id: "z2cv2vXs_fs",
+        eye: eye11
+    },
+    {
+        title: "don't mess with your eye",
+        author: "Amy Frear",
+        id: "US5fag9DiSM",
+        eye: eye12
+    },
+    {
+        title: "mirror eye",
+        author: "Matthew Ober",
+        id: "vcwg1K_eGCQ",
+        eye: eye13
+    },
+
     
 ]
 

@@ -1,0 +1,14 @@
+.create-account {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 20px;
+}

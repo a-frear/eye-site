@@ -1,8 +1,8 @@
-.eyes {
-    margin: 10px 10px 100px 10px;
-}
-
-.eye-btn {
-    max-width: 300px;
-    cursor: pointer;
-}
+ul {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    }
