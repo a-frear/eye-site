@@ -30,10 +30,10 @@ class LikeButton extends Component {
                 <label>{this.state.likes} winks</label>
                 <div className="imageBox">
                 <div class="imageInn">
-                    <img alt="wink-icon" src={likeButton} className="like-button" id="likeVideo" onClick={this.addLike} id={this.props.vidId}/>
+                    <img alt="wink-icon" src={likeButton} className="like-button" id="likeVideo" onClick={this.addLike}/>
 				</div>
 				<div class="hoverImg">
-                    <img alt="wink-icon-pink" src={pinkLikeButton} className="like-button" id="likeVideo" onClick={this.addLike} id={this.props.vidId}/>
+                    <img alt="wink-icon-pink" src={pinkLikeButton} className="like-button" id="likeVideo" onClick={this.addLike}/>
 				</div>
                 </div>
             </form>

@@ -12,21 +12,11 @@ body {
 }
 
 .title-img{
+    min-width: 280px;
     max-width: 100%;
     text-align: center;
     margin-top: 50px;
 }
-
-.logo {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 50px;
-    max-width: 200px;
-}
-
 
 .imageBox {
     position: relative;

@@ -1,10 +1,11 @@
 .About {
-    margin: 15px 100px 50px 100px;
     text-align: center;
 }
 
 .about-img {
+    min-width: 280px;
     max-width: 100%;
+    margin: 0 auto;
     margin-top: 50px;
     border: 3px solid  #F73BB2;
 }
@@ -13,8 +14,15 @@
     font-family: 'Fraunces', serif;
     font-size: 14pt;
     max-width: 600px;
+    min-width: 280px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 50px;
     border: 3px solid  #F73BB2;
-    padding: 2px;
+}
+
+@media only screen and (min-width: 600px) {
+    .about-paragragh {
+        padding: 10px;
+    }
 }

@@ -11,6 +11,8 @@ import eye10 from './img/asset-10.png'
 import eye11 from './img/asset-11.png'
 import eye12 from './img/asset-12.png'
 import eye13 from './img/asset-13.png'
+import eye14 from './img/asset-14.png'
+import eye15 from './img/asset-15.png'
 import PinkEye1 from './img/pink-eye-1.png'
 import PinkEye2 from './img/pink-eye-2.png'
 import PinkEye3 from './img/pink-eye-3.png'
@@ -24,6 +26,8 @@ import PinkEye10 from './img/pink-eye-10.png'
 import PinkEye11 from './img/pink-eye-11.png'
 import PinkEye12 from './img/pink-eye-12.png'
 import PinkEye13 from './img/pink-eye-13.png'
+import PinkEye14 from './img/pink-eye-14.png'
+import PinkEye15 from './img/pink-eye-15.png'
 
 
 const vidData = [
@@ -83,9 +87,9 @@ const vidData = [
     },
     {
         id: 7,
-        title: "eye site teasers",
+        title: "behold beauty",
         author: "Amy Frear",
-        url: "https://www.youtube.com/embed/-wCM2irwA1I",
+        url: "https://www.youtube.com/embed/UpG4WyUJhAc",
         eye: eye7,
         pink_eye: PinkEye7,
         likes: 0
@@ -130,7 +134,7 @@ const vidData = [
         id: 12,
         title: "don't mess with your eye",
         author: "Amy Frear",
-        url: "https://www.youtube.com/embed/US5fag9DiSM",
+        url: "https://www.youtube.com/embed/4l8WRt01N0E",
         eye: eye12,
         pink_eye: PinkEye12,
         likes: 0
@@ -144,6 +148,24 @@ const vidData = [
         pink_eye: PinkEye13,
         likes: 0
     },
+    {
+        id: 14,
+        title: "wide open",
+        author: "Amy Frear",
+        url: "https://www.youtube.com/embed/pYHgutvpxWQ",
+        eye: eye14,
+        pink_eye: PinkEye14,
+        likes: 0
+    },
+    {
+        id: 15,
+        title: "eye on the ball",
+        author: "Amy Frear",
+        url: "https://www.youtube.com/embed/M78rsWdFYhE",
+        eye: eye15,
+        pink_eye: PinkEye15,
+        likes: 0
+    }
 
     
 ]

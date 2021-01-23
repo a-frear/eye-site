@@ -18,6 +18,8 @@
 .comment-submit {
     margin-top: 5px;
     border: none;
+    color: black;
+    background: white;
 }
 
 .comment-submit:hover {

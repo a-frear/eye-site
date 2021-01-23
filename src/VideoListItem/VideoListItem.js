@@ -33,7 +33,7 @@ render(){
          }}/>
 				</div>
 				<div class="hoverImg">
-                    <img alt={this.props.altText} src={this.props.pinkEye} className="eye-btn" id="eye-bth"  id={this.props.vidId} onClick={e => {
+                    <img alt={this.props.altText} src={this.props.pinkEye} className="eye-btn"  id={this.props.vidId} onClick={e => {
               this.showModal();
          }}/>
 				</div>
