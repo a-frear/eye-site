@@ -24,7 +24,7 @@ class Contact extends React.Component {
                     </fieldset>
                 </form>
                 <div>
-                    <h3> Or reach out directly to <a id="email" href="mailto:eyesiteclub@gmail.com" target="_blank">eyesiteclub@gmail.com</a></h3>
+                    <h3 className='reach-out'> Or reach out directly to <a id="email" href="mailto:eyesiteclub@gmail.com" target="_blank" rel="noreferrer">eyesiteclub@gmail.com</a></h3>
                 </div>
             </section>
         )

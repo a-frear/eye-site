@@ -11,42 +11,42 @@
 
 fieldset{
     padding: 10px 12px;
-    border: 1px solid black;
+    border: 3px solid  #F73BB2;
     margin-top: 35px;
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
 }
   
-legend {
+.contact legend {
     border: none;
     font-size: 35px;
 }
 
-label {
+.contact label {
     display: block;
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
   
-textarea {
+.contact textarea {
     height: 4.75rem;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-button {
+.contact button {
     padding: 5px;
     margin-bottom: 20px;
 }
 
-h3 {
+.reach-out {
     margin-bottom: 60px;
     font-family: 'Fraunces', serif;
 }
 
-a {
+.contact a {
     text-decoration: none;
     color: black;
 }

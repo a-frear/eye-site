@@ -6,12 +6,15 @@
 .about-img {
     max-width: 100%;
     margin-top: 50px;
+    border: 3px solid  #F73BB2;
 }
 
-p {
+.about-paragraph {
     font-family: 'Fraunces', serif;
     font-size: 14pt;
     max-width: 600px;
     margin: 0 auto;
     margin-top: 50px;
+    border: 3px solid  #F73BB2;
+    padding: 2px;
 }

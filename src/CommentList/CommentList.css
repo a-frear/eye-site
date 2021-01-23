@@ -1,0 +1,32 @@
+.comment-list {
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: -38px;
+    color: white;
+    font-family: 'Fraunces';
+}
+
+.comment-list-item {
+    border: 1px solid #F73BB2;
+    padding: 10px;
+}
+
+#new-comment-input {
+    margin-top: 5px;
+}
+
+.comment-submit {
+    margin-top: 5px;
+    border: none;
+}
+
+.comment-submit:hover {
+    background: #F73BB2;
+}
+
+.user {
+    text-transform: uppercase;
+    font-family: "Bau-SuperItalic";
+    font-weight: lighter;
+}
+

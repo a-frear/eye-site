@@ -28,7 +28,7 @@ class Submit extends React.Component {
                     </fieldset>
                 </form>
                 <div>
-                    <h3> Reach out to <a id="email" href="mailto:eyesiteclub@gmail.com" target="_blank">eyesiteclub@gmail.com</a> with any questions.</h3>
+                    <h3> Reach out to <a id="email" href="mailto:eyesiteclub@gmail.com" target="_blank" rel="noreferrer">eyesiteclub@gmail.com</a> with any questions.</h3>
                 </div>
             </section>
         )

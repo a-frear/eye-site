@@ -4,9 +4,14 @@ nav {
     margin-top: 30px;
 }
 
-.link {
+.nav-link {
     padding-left: 20px;
     font-size: 30px;
     color: #000000;
     text-decoration: none;
 }
+
+.nav-link:hover {
+    color: #F73BB2;
+}
+

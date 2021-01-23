@@ -5,7 +5,8 @@ class CreateAccount extends Component{
     render(){
         return(
             <section className='create-account'>
-            <h1>Create Account</h1>
+            <fieldset>
+            <legend>Create Account</legend>
             <form>
                 <label>Username:</label>
                 <input type='text' id='username'/>
@@ -15,6 +16,7 @@ class CreateAccount extends Component{
                 <button type='submit'>Submit</button>
                 </div>
             </form>
+            </fieldset>
             </section>
         )
     }

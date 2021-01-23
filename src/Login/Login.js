@@ -6,7 +6,8 @@ class Login extends Component{
     render(){
         return(
             <section className='login'>
-            <h1>Log in</h1>
+            <fieldset>
+            <legend>Log in</legend>
             <form>
                 <label>Username:</label>
                 <input type='text' id='username'/>
@@ -16,7 +17,8 @@ class Login extends Component{
                 <button type='submit'>Submit</button>
                 </div>
             </form>
-            <Link to={'/create-account'}>Create account</Link>
+            </fieldset>
+            <Link to={'/create-account'} className='create-account-link'>Create account</Link>
             </section>
         )
     }

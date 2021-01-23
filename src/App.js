@@ -6,7 +6,8 @@ import './App.css'
 import Videos from './Videos/Videos'
 import About from './About/About'
 import Contact from './Contact/Contact'
-import eyeSiteTitle from './img/eye-site-title-hi-res.png'
+import eyeSiteTitle from './img/black.png'
+import eyeSiteTitlePink from './img/hotpink-title.png'
 import Login from './Login/Login'
 import CreateAccount from './CreateAccount/CreateAccount'
 import Submit from './Submit/Submit'
@@ -24,7 +25,7 @@ class App extends React.Component {
               path='/about'
               component={About}/>
         <Route
-              exact path='/'
+              exact path='/videos'
               component={Videos}/>
         <Route
         path = '/login'
@@ -41,8 +42,18 @@ class App extends React.Component {
         </section>
         <section className='footer'>
         <div>
-        <Link to={'/'}><img src={eyeSiteTitle} alt="Eye Site" className='title-img' /></Link>
         </div>
+        <div className="imageBox">
+        <Link to={'/videos'}>
+					<div class="imageInn">
+          <img src={eyeSiteTitle} alt="Eye Site" className='title-img' />
+					</div>
+					<div class="hoverImg">
+          <img src={eyeSiteTitlePink} alt="Eye Site Pink" className='title-img' />
+          <h1 className='sore-eyes'>A Site For Sore Eyes</h1>
+					</div>
+          </Link>
+				</div>
         </section>
       </div>
        
