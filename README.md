@@ -1,3 +1,3 @@
 # EYE SITE
 
-An art project.
+An art project in progress.
