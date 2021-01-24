@@ -38,8 +38,6 @@ body {
     position: relative;
     display: block;
   }
-
-
   
 .sore-eyes {
     text-align: center;
@@ -55,6 +53,10 @@ a {
 
 @media(hover: hover) and (pointer: fine) {
   .imageBox:hover .hoverImg {
+    display: block;
+  }
+
+  .imageInn1 {
     display: block;
   }
 
