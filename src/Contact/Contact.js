@@ -5,7 +5,7 @@ class Contact extends React.Component {
     render () {
         return (
             <section className="contact">
-                <form action="https://formspree.io/amy.frear@gmail.com" method="post">
+                <form   action="https://formspree.io/f/xeqpnrre" method="POST">
                     <fieldset>
                         <legend>Contact:</legend>
                         <div>

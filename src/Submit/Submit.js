@@ -5,7 +5,7 @@ class Submit extends React.Component {
     render () {
         return (
             <section className="submit">
-                <form action="https://formspree.io/amy.frear@gmail.com" method="post">
+                <form   action="https://formspree.io/f/moqprkke"method="POST">
                     <fieldset>
                         <legend>Submission Form</legend>
                         <div>
