@@ -30,21 +30,16 @@ body {
     display: none;
   }
 
-  .imageBox1 {
-    position: relative;
-    float: left;
-  }
-  
-  .imageBox1 .hoverImg1 {
-    position: absolute;
-    left: 0;
-    top: 0;
+  .imageInn1 {
     display: none;
   }
 
-  .imageBox1:hover .hoverImg1 {
+  .imageBox1 .hoverImg1 {
+    position: relative;
     display: block;
   }
+
+
   
 .sore-eyes {
     text-align: center;
@@ -62,18 +57,20 @@ a {
   .imageBox:hover .hoverImg {
     display: block;
   }
-}
 
-@media only screen and (max-width: 728px) {
- 
-  .imageInn1 {
+  .imageBox1 {
+    position: relative;
+    float: left;
+  }
+  
+  .imageBox1 .hoverImg1 {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: none;
   }
 
-  .imageBox1 .hoverImg1 {
-    position: relative;
+  .imageBox1:hover .hoverImg1 {
     display: block;
   }
-
-  
 }
