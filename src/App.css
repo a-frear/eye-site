@@ -44,7 +44,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: black;
-    font-size: 50px;
     font-weight: 100;
     color: #F73BB2;
 }
@@ -76,6 +75,10 @@ a {
 
   .imageBox1:hover .hoverImg1 {
     display: block;
+  }
+
+  .sore-eyes {
+    font-size: 45px;
   }
 
 }
