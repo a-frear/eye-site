@@ -41,3 +41,11 @@ body {
     font-weight: 100;
     color: #F73BB2;
 }
+
+@media only screen and (min-width: 800px) {
+
+  .imageBox:hover .hoverImg {
+    display: block;
+  }
+}
+
