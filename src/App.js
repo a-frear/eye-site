@@ -43,7 +43,7 @@ class App extends React.Component {
         <section className='footer'>
         <div>
         </div>
-        <div className="imageBox">
+        <div className="imageBox1">
         <Link to={'/videos'}>
 					<div class="imageInn1">
           <img src={eyeSiteTitle} alt="Eye Site" className='title-img' />
