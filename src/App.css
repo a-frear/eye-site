@@ -29,6 +29,22 @@ body {
     top: 0;
     display: none;
   }
+
+  .imageBox1 {
+    position: relative;
+    float: left;
+  }
+  
+  .imageBox1 .hoverImg1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+
+  .imageBox1:hover .hoverImg1 {
+    display: block;
+  }
   
 .sore-eyes {
     text-align: center;
@@ -38,10 +54,8 @@ body {
     color: #F73BB2;
 }
 
-@media only screen and (min-width: 800px) {
-
+@media(hover: hover) and (pointer: fine) {
   .imageBox:hover .hoverImg {
     display: block;
   }
 }
-
