@@ -66,10 +66,14 @@ body {
     float: left;
   }
   
-  .imageBox1 .imageInn1 {
+  .imageInn1 {
     position: absolute;
     left: 0;
     top: 0;
     display: none;
+  }
+
+  .imageBox1 .hoverImg1 {
+    display: block;
   }
 }
