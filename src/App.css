@@ -45,6 +45,8 @@ body {
     letter-spacing: 2px;
     color: black;
     font-size: 50px;
+    font-weight: 100;
+    color: #F73BB2;
 }
 
 a {
@@ -76,8 +78,4 @@ a {
     display: block;
   }
 
-  .sore-eyes {
-    font-weight: 100;
-    color: #F73BB2;
-}
 }
