@@ -28,7 +28,7 @@ render(){
             <div className='fragment'>
             <div className="imageBox">
             <div class="imageInn">
-                    <img alt={this.props.altText} src={this.props.eyeArt} className="eye-btn" id="eye-btn" onClick={e => {
+                    <img alt={this.props.altText} src={this.props.eyeArt} className="eye-btn" id={this.props.vidId} onClick={e => {
               this.showModal();
          }}/>
 				</div>
