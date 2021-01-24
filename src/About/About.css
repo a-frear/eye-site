@@ -7,7 +7,6 @@
     max-width: 100%;
     margin: 0 auto;
     margin-top: 50px;
-    border: 3px solid  #F73BB2;
 }
 
 .about-paragraph {
@@ -18,7 +17,6 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 50px;
-    border: 3px solid  #F73BB2;
 }
 
 @media only screen and (min-width: 600px) {
