@@ -30,10 +30,6 @@ body {
     display: none;
   }
   
-  .imageBox:hover .hoverImg {
-    display: block;
-  }
-
 .sore-eyes {
     text-align: center;
     text-transform: uppercase;
