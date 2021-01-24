@@ -27,12 +27,12 @@ render(){
           <li className='video-list'>
             <div className='fragment'>
             <div className="imageBox">
-            <div class="imageInn">
+            <div className="imageInn">
                     <img alt={this.props.altText} src={this.props.eyeArt} className="eye-btn" id={this.props.vidId} onClick={e => {
               this.showModal();
          }}/>
 				</div>
-				<div class="hoverImg">
+				<div className="hoverImg">
                     <img alt={this.props.altText} src={this.props.pinkEye} className="eye-btn"  id={this.props.vidId} onClick={e => {
               this.showModal();
          }}/>

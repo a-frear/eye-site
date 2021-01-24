@@ -45,10 +45,10 @@ class App extends React.Component {
         </div>
         <div className="imageBox1">
         <Link to={'/videos'}>
-					<div class="imageInn1">
+					<div className="imageInn1">
           <img src={eyeSiteTitle} alt="Eye Site" className='title-img' />
 					</div>
-					<div class="hoverImg1">
+					<div className="hoverImg1">
           <img src={eyeSiteTitlePink} alt="Eye Site Pink" className='title-img' />
           <h1 className='sore-eyes'>A Site For Sore Eyes</h1>
 					</div>
