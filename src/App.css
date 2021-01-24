@@ -43,8 +43,8 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 100;
-    color: #F73BB2;
+    color: black;
+    font-size: 50px;
 }
 
 a {
@@ -75,4 +75,9 @@ a {
   .imageBox1:hover .hoverImg1 {
     display: block;
   }
+
+  .sore-eyes {
+    font-weight: 100;
+    color: #F73BB2;
+}
 }
