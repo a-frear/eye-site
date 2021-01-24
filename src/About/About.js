@@ -24,7 +24,6 @@ class About extends React.Component {
                 <br/>
                 <br/>
                 </p>
-                <p>Eye Site is a creation of Amy Frear, Iva Yos, and Matthew Ober.</p>
             </section>
         )
     }
