@@ -42,8 +42,15 @@
 }
 
 .submit h3 {
-    margin-bottom: 60px;
     font-family: 'Fraunces', serif;
+}
+
+.submit-desc {
+    margin-bottom: 10px;
+}
+
+.submit-reach-out {
+    margin-bottom: 60px;
 }
 
 .submit a {

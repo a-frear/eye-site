@@ -9,6 +9,7 @@ class Submit extends React.Component {
                     <fieldset>
                         <legend>Submission Form</legend>
                         <div>
+                            <h3 className='submit-desc'>Submit your own Eye Content!</h3>
                             <label for="name">Name:</label>
                             <input id="name" type="text" name="name"/>
                             <div>
@@ -16,7 +17,7 @@ class Submit extends React.Component {
                                 <input id="email-form" type="text" name="email"/>
                             </div>
                             <div>
-                                <label for="message">Link to video:</label>
+                                <label for="message">Youtube link:</label>
                                 <input id="video-link" type="text" name="video-link"/>
                             </div>
                             <div>
@@ -28,7 +29,7 @@ class Submit extends React.Component {
                     </fieldset>
                 </form>
                 <div>
-                    <h3> Reach out to <a id="email" href="mailto:eyesiteclub@gmail.com" target="_blank" rel="noreferrer">eyesiteclub@gmail.com</a> with any questions.</h3>
+                    <h3 className='submit-reach-out'> Reach out to <a id="email" href="mailto:eyesiteclub@gmail.com" target="_blank" rel="noreferrer">eyesiteclub@gmail.com</a> with any questions.</h3>
                 </div>
             </section>
         )
