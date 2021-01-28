@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Navigation = styled.header`
-.nav  a {
+.nav  a, .log-in-button {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -20,6 +20,17 @@ const Navigation = styled.header`
     font-size: 2rem;
   }
 
+  .log-in-button {
+    border: none;
+    font-family: 'Bau-SuperItalic';
+    background: white;
+}
+
+.log-in-button:hover {
+  color: #F73BB2;
+}
+
+}
 
   .nav ul {
     display: flex;
@@ -89,6 +100,7 @@ class Nav extends Component {
       isExpanded: !this.state.isExpanded
     });
   }
+  
   render() {
     const { isExpanded } = this.state;
 

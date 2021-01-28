@@ -55,3 +55,11 @@
 .create-account-link:hover {
     color: #F73BB2;
 }
+
+.log-in-button {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-left: 20px;
+  }

@@ -15,3 +15,13 @@ nav {
     color: #F73BB2;
 }
 
+.log-in-button {
+    padding-left: 20px;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    font-family: 'Bau-SuperItalic';
+
+}
+

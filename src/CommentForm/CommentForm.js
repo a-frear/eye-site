@@ -1,52 +1,92 @@
 import React, {Component } from 'react'
 import CommentList from '../CommentList/CommentList'
+import config from '../config'
 
 class CommentForm extends Component {
     constructor () {
         super()
         this.state = {
-          comments: [
-              {
-                  user: 'FilmFan123',
-                  message: 'Love this!'
-              },
-              {
-                  user: 'EyeLover',
-                  message: 'To be or not to be, that is the question. Whether tis nobler in the mind to bear the slings and arrows of outrageous fortune...'
-              }
-          ]
+          comments: [],
+          error: null,
         }
 
-        this.addComment = this.addComment.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
       }
+
+      setComments = comments => {
+        this.setState({ 
+          comments,
+          error: null,
+         })
+      }
+
+      componentDidMount(){  
+        fetch(config.API_ENDPOINT_comments, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json',
+          }
+        })
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(res.status)
+          }
+          return res.json()
+        })
+        .then(this.setComments)
+        .catch(error => this.setState({ error }))
+      }
+
+      addComment = comment => {
+        this.setState({
+          comments: [
+            ...this.state.comments,
+            comment
+          ]
+        })
+      };
     
 
-     addComment = e => {
+     handleSubmit = e => {
         e.preventDefault()
-        const newComment = { 
-                            user: 'Eyes4Life',
-                            message: e.target['new-comment'].value
-                            }
-          this.setState({
-                comments: [
-                    ...this.state.comments, newComment
-                ]
+        const newComment = {
+          modified: new Date(),
+          user_id: 1,
+          video_id: this.props.vidId,
+          content: e.target['new-comment'].value,
+        }
+        fetch(config.API_ENDPOINT_comments, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(newComment),
         })
-        e.target['new-comment'].value = "";
+          .then(res => {
+            if (!res.ok)
+              return res.json().then(e => Promise.reject(e))
+            return res.json()
+          })
+          .then(comment => {
+            this.addComment(comment)
+          })
+          .catch(error => {
+            console.error({ error })
+          })
       }
 
     render() {
-        
+          
           return (
             <div>
-                <form className='comment'  onSubmit={this.addComment}>
+                <form className='comment'  onSubmit={this.handleSubmit}>
                     <label>Comment:</label>
-                    <textarea type='text' id='new-comment-input' name='new-comment' required></textarea>
+                    <textarea type='text' id='new-comment' name='new-comment' required></textarea>
                     <div>
                     <button className='comment-submit'>Submit</button> 
                     </div>
                 </form>
-                <CommentList comments={this.state.comments} />
+                <CommentList comments={this.state.comments} vidId={this.props.vidId} />
             </div>
           )
       }

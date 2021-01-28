@@ -8,6 +8,17 @@ li {
     cursor: pointer;
 }
 
+.subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-weight: 100;
+}
+
+#author {
+    text-transform: uppercase;
+}
 
 .modal-container {
     display: flex;

@@ -1,7 +1,6 @@
 import React from 'react'
 import Modal from '../Modal/Modal'
 import './VideoListItem.css'
-import vidData from '../vidData'
 import LikeButton from '../LikeButton/LikeButton'
 import CommentForm from '../CommentForm/CommentForm'
 
@@ -9,7 +8,6 @@ class VideoListItem extends React.Component {
     constructor () {
         super()
         this.state = {
-          videos: vidData,
           show: false,
         }
 
@@ -51,9 +49,13 @@ render(){
                 </button>
             </div>
             <div className='content-wrapper'>
+            {/*<div className='subtitle'>
+                  <h4>{this.props.altText}</h4>
+                  <h4 id='author'>{this.props.author}</h4>
+        </div>*/}
                 <iframe width="560" height="315" title="video" src={this.props.vidUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <LikeButton />
-                <CommentForm />
+                <LikeButton vidId={this.props.id} />
+                <CommentForm vidId={this.props.id} />
                 </div>
                 </div>
                 </Modal>

@@ -1,13 +1,40 @@
 import React from 'react'
 import './Videos.css'
 import VideoListItem from '../VideoListItem/VideoListItem'
-import vidData from '../vidData'
+import config from '../config'
 
  
 class Videos extends React.Component {
   state = {
-    videos: vidData
+    videos: [],
+    error: null
   };
+
+  setVideos = videos => {
+    this.setState({ 
+      videos,
+      error: null,
+     })
+  }
+
+  componentDidMount(){  
+    fetch(config.API_ENDPOINT_videos, {
+    method: 'GET',
+    headers: {
+        'content-type': 'application/json',
+      }
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(res.status)
+      }
+      return res.json()
+    })
+    .then(this.setVideos)
+    .catch(error => this.setState({ error }))
+  }
+
+  
 
 render() {
   return (
@@ -16,10 +43,11 @@ render() {
           {this.state.videos.map(video =>
             <VideoListItem
               key={video.id}
+              id={video.id}
               vidUrl={video.url}
               eyeArt={video.eye}
+              author={video.author}
               altText={video.title}
-              likes={video.likes}
               pinkEye={video.pink_eye}
             />
           )}
