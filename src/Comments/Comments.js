@@ -1,26 +1,15 @@
-import React, {Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import CommentList from '../CommentList/CommentList'
 import config from '../config'
+import { useAuth0 } from "@auth0/auth0-react"
+import CommentSubmit from '../CommentSubmit/CommentSubmit'
 
-class CommentForm extends Component {
-    constructor () {
-        super()
-        this.state = {
-          comments: [],
-          error: null,
-        }
+const Comments= (props) => {
+ 
+        const [comments, setComments] = useState([])
+  
 
-        this.handleSubmit = this.handleSubmit.bind(this)
-      }
-
-      setComments = comments => {
-        this.setState({ 
-          comments,
-          error: null,
-         })
-      }
-
-      componentDidMount(){  
+        useEffect(() => {
         fetch(config.API_ENDPOINT_comments, {
         method: 'GET',
         headers: {
@@ -33,32 +22,27 @@ class CommentForm extends Component {
           }
           return res.json()
         })
-        .then(this.setComments)
-        .catch(error => this.setState({ error }))
-      }
+        .then(setComments)
+        .catch()
+        }, [])
 
-      addComment = comment => {
-        this.setState({
-          comments: [
-            ...this.state.comments,
-            comment
-          ]
-        })
-      };
-    
+      const { user, getAccessTokenSilently } = useAuth0()
 
-     handleSubmit = e => {
+      const handleSubmit = async (e) => {
         e.preventDefault()
+        const token = await getAccessTokenSilently()
         const newComment = {
           modified: new Date(),
-          user_id: 1,
-          video_id: this.props.vidId,
+          user_name: user.nickname,
+          video_id: props.vidId,
           content: e.target['new-comment'].value,
         }
+        e.target['new-comment'].value=''
         fetch(config.API_ENDPOINT_comments, {
           method: 'POST',
           headers: {
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            Authorization: `Bearer ${token}`
           },
           body: JSON.stringify(newComment),
         })
@@ -68,28 +52,26 @@ class CommentForm extends Component {
             return res.json()
           })
           .then(comment => {
-            this.addComment(comment)
+            setComments([...comments, comment])
           })
           .catch(error => {
             console.error({ error })
           })
       }
 
-    render() {
-          
           return (
             <div>
-                <form className='comment'  onSubmit={this.handleSubmit}>
+              {/* <form className='comment'  onSubmit={e =>handleSubmit(e)}> 
                     <label>Comment:</label>
                     <textarea type='text' id='new-comment' name='new-comment' required></textarea>
                     <div>
                     <button className='comment-submit'>Submit</button> 
                     </div>
-                </form>
-                <CommentList comments={this.state.comments} vidId={this.props.vidId} />
+                </form> */}
+                <CommentSubmit handleSubmit={handleSubmit} />
+                <CommentList comments={comments} vidId={props.vidId} />
             </div>
           )
-      }
     }
 
-    export default CommentForm
+    export default Comments

@@ -1,47 +1,19 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react'
 import './Login.css'
-import config from '../config'
 
-class Login extends Component{
+const Login = () => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
-    handleLogin() {
-        fetch(config.API_ENDPOINT_login, {
-            method: 'OPTIONS',
-            headers: {
-                'content-type': 'application/json',
-              }
-            })
-            .then(res => {
-              if (!res.ok) {
-                throw new Error(res.status)
-              }
-              return res.json()
-            })
-            .catch(error => console.log(error))
-          }
-    
-
-    render(){
-        return(
-            <section className='login'>
-            <button className='log-in-button' onClick={this.handleLogin}>Log In</button>
-            <fieldset>
-            <legend>Log in</legend>
-            <form>
-                <label>Username:</label>
-                <input type='text' id='username'/>
-                <label>Password:</label>
-                <input type='text' id='password'/>
-                <div>
-                <button type='submit'>Submit</button>
-                </div>
-            </form>
-            </fieldset>
-            <Link to={'/create-account'} className='create-account-link'>Create account</Link>
-            </section>
-        )
-    }
+  return (
+    !isAuthenticated && (
+      <div className='login'>
+      <button onClick={() => loginWithRedirect()}>
+        Log In
+      </button>
+      </div>
+    )
+  )
 }
 
-export default Login;
+export default Login

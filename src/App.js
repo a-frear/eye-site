@@ -1,19 +1,17 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Nav from './Nav/Nav'
-import '../node_modules/react-modal-video/scss/modal-video.scss'
 import './App.css'
 import Videos from './Videos/Videos'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import eyeSiteTitle from './img/black.png'
 import eyeSiteTitlePink from './img/hotpink-title.png'
-import Login from './Login/Login'
-import CreateAccount from './CreateAccount/CreateAccount'
 import Submit from './Submit/Submit'
 
 class App extends React.Component {
     render () {
+
       return (
         <div>
         <header>
@@ -27,12 +25,6 @@ class App extends React.Component {
         <Route
               exact path='/videos'
               component={Videos}/>
-        <Route
-        path = '/login'
-        component={Login}/>
-        <Route
-        path = '/create-account'
-        component={CreateAccount}/>
         <Route
         path = '/submit'
         component={Submit}/>

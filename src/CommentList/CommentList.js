@@ -17,7 +17,7 @@ class CommentList extends Component {
                 <ul className='comment-list'>
                   {commentsForVideo.map(comment =>
                         <li className='comment-list-item' key={comment.id}>
-                            <h3 className='user'>{comment.user_id}:</h3>
+                            <h3 className='user'>{comment.user_name}:</h3>
                             <p className='message'>{comment.content}</p>
                         </li>
                     )}

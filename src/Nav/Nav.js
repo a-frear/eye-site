@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Login from '../Login/Login'
+import Logout from '../Logout/Logout'
 
 const Navigation = styled.header`
 .nav  a, .log-in-button {
@@ -20,15 +22,6 @@ const Navigation = styled.header`
     font-size: 2rem;
   }
 
-  .log-in-button {
-    border: none;
-    font-family: 'Bau-SuperItalic';
-    background: white;
-}
-
-.log-in-button:hover {
-  color: #F73BB2;
-}
 
 }
 
@@ -125,9 +118,8 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/contact">
               <li>Contact</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/login">
-              <li>Log In</li>
-            </NavLink>
+            <Login />
+            <Logout />
           </ul>
         </nav>
       </Navigation>
