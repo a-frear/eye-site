@@ -3,6 +3,7 @@
     font-size: 42px;
     background: white;
     margin-top: -1px;
+    cursor: pointer;
 }
 
 .auth-link:hover {
