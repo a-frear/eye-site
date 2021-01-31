@@ -8,9 +8,9 @@ const Logout = () => {
   return (
     isAuthenticated && (
       <div className='logout'>
-      <button onClick={() => logout()}>
+      <p className='auth-link'onClick={() => logout()}>
         Log Out
-      </button>
+      </p>
       </div>
     )
   )

@@ -5,15 +5,14 @@ import Login from '../Login/Login'
 import Logout from '../Logout/Logout'
 
 const Navigation = styled.header`
-.nav  a, .log-in-button {
+.navigation-link {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 30px;
-    padding-left: 20px;
+    font-size: 42px;
   }
 
-.nav  a:hover {
+.navigation-link {
     color: #F73BB2;
   }
   .fa-bars {
@@ -32,8 +31,7 @@ const Navigation = styled.header`
 }
 
 .nav li {
-    padding-left: 20px;
-    font-size: 30px;
+    font-size: 42px;
     color: #000000;
     text-decoration: none;
 }
@@ -106,16 +104,16 @@ class Nav extends Component {
             onClick={e => this.handleToggle(e)}
           />
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-            <NavLink activeClassName="active" to="/videos">
+            <NavLink activeClassName="active" className='navigation-link' to="/videos">
               <li>Videos</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/about">
+            <NavLink activeClassName="active" className='navigation-link' to="/about">
               <li>Why</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/submit">
+            <NavLink activeClassName="active" className='navigation-link' to="/submit">
               <li>Submit</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/contact">
+            <NavLink activeClassName="active" className='navigation-link' to="/contact">
               <li>Contact</li>
             </NavLink>
             <Login />

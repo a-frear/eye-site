@@ -3,18 +3,18 @@ code {
     monospace;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Bau-SuperItalic';
   src: local('Bau-SuperItalic'), url(./fonts/Bau-SuperItalic.otf) format('otf');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
   margin: 0;
-  font-family: 'Bau-SuperItalic', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Epilogue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
+
