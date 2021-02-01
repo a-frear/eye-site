@@ -70,7 +70,7 @@ const LikeButton = (props) => {
 
     const video_id = props.vidId;
     const likesForVideo = getLikesForVideo(likes, video_id);
-    const buttonSrc = updated && likes.filter((like) => !like.user_id === user.id) ? pinkLikeButton : likeButton
+    const buttonSrc = likesForVideo.filter((like) => !like.user_id === user.id) ? pinkLikeButton : likeButton
     return ( isAuthenticated && (
       <div>
         <form className="like">
@@ -81,7 +81,7 @@ const LikeButton = (props) => {
                 src={buttonSrc}
                 className="like-button"
                 id="likeVideo"
-                onClick={handleClick(e)}
+                onClick={handleClick}
               />
             </div>
           {/* <div className="imageBox">
