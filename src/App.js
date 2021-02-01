@@ -8,6 +8,7 @@ import Contact from './Contact/Contact'
 import eyeSiteTitle from './img/black.png'
 import eyeSiteTitlePink from './img/hotpink-title.png'
 import Submit from './Submit/Submit'
+import HowTo from './HowTo/HowTo'
 
 class App extends React.Component {
     render () {
@@ -31,10 +32,11 @@ class App extends React.Component {
         <Route
         path = '/contact'
         component={Contact}/>
+        <Route
+        exact path = '/'
+        component={HowTo}/>
         </section>
         <section className='footer'>
-        <div>
-        </div>
         <div className="imageBox1">
         <Link to={'/videos'}>
 					<div className="imageInn1">

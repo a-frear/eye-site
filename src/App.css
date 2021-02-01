@@ -52,6 +52,21 @@ a {
   text-decoration: none;
 }
 
+.how-to {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.how-to-desc {
+  font-size: 24px;
+  max-width: 300px;
+  border: 5px solid #F73BB2;
+  padding: 20px;
+  text-align: center;
+}
+
 @media(hover: hover) and (pointer: fine) {
   .imageBox:hover .hoverImg {
     display: block;
@@ -85,5 +100,30 @@ a {
   .title-img{
     margin-top: 20px;
 }
+}
+
+@media only screen and (min-width: 600px) {
+
+.how-to {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.how-to-desc {
+  font-size: 24px;
+  max-width: 300px;
+  border: 5px solid #F73BB2;
+  padding: 20px;
+  text-align: center;
+}
 
 }
+
+@media only screen and (min-width: 1000px) {
+
+  .how-to {
+    margin-top: -30px;
+  }
+  }
