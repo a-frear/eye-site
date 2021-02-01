@@ -26,7 +26,7 @@ const LikeButton = (props) => {
         return res.json();
       })
       .then(setLikes)
-      .catch((error) => this.setState({ error }));
+      .catch();
     }, []);
 
    function addLike(like) {
