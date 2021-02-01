@@ -90,7 +90,7 @@ class LikeButton extends Component {
       <div>
         <form className="like">
           <label>{likesForVideo.length} winks</label>
-          <div className="imageInn">
+          <div>
               <img
                 alt="wink-icon"
                 src={buttonSrc}
