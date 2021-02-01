@@ -75,7 +75,6 @@ class LikeButton extends Component {
     const likes = this.state.likes;
     const video_id = this.props.vidId;
     const likesForVideo = this.getLikesForVideo(likes, video_id);
-    console.log(likesForVideo);
     return (
       <div>
         <form className="like">
