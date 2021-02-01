@@ -36,14 +36,15 @@ const LikeButton = (props) => {
   }
 
   const findUserLikes = likes.filter((like) => like.user_name === user.nickname)
+  console.log(findUserLikes)
 
   const handleClick = async (e) => {
     e.preventDefault();
-    if (findUserLikes.length === 1) { 
+    if (findUserLikes.length === 0) { 
       e.preventDefault();
       const newLike = {
       video_id: props.vidId,
-      user_id: user.nickname
+      user_name: user.nickname
     };
     fetch(config.API_ENDPOINT_likes, {
       method: "POST",
