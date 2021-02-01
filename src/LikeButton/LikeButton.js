@@ -37,6 +37,7 @@ const LikeButton = (props) => {
 
   const findUserLikes = likes.filter((like) => like.user_name === user.nickname)
   console.log(findUserLikes)
+  console.log(likes)
 
   const handleClick = async (e) => {
     e.preventDefault();
