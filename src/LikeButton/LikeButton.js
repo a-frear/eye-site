@@ -85,7 +85,7 @@ class LikeButton extends Component {
     const likes = this.state.likes;
     const video_id = this.props.vidId;
     const likesForVideo = this.getLikesForVideo(likes, video_id);
-    const buttonSrc = this.state.update ? likeButton : pinkLikeButton
+    const buttonSrc = this.state.updated ? likeButton : pinkLikeButton
     return (
       <div>
         <form className="like">
