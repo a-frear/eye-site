@@ -1,17 +1,17 @@
 .imageBox {
-    position: relative;
-    float: left;
-  }
-  
-  .imageBox .hoverImg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-  }
+  position: relative;
+  float: left;
+}
 
-  @media(hover: hover) and (pointer: fine) {
-    .imageBox:hover .hoverImg {
-      display: block;
-    }
+.imageBox .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .imageBox:hover .hoverImg {
+    display: block;
   }
+}

@@ -1,52 +1,52 @@
 .contact {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
-    font-size: 1.5em;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  font-size: 1.5em;
 }
 
-.contact fieldset{
-    padding: 10px 12px;
-    border: 3px solid  #F73BB2;
-    margin-top: 35px;
-    max-width: 600px;
-    margin-right: auto;
-    margin-left: auto;
+.contact fieldset {
+  padding: 10px 12px;
+  border: 3px solid #f73bb2;
+  margin-top: 35px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 }
-  
+
 .contact legend {
-    border: none;
-    font-size: 40px;
+  border: none;
+  font-size: 40px;
 }
 
 .contact label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
-  
+
 .contact textarea {
-    height: 4.75rem;
-    margin-bottom: 20px;
+  height: 4.75rem;
+  margin-bottom: 20px;
 }
 
 .contact button {
-    padding: 5px;
-    margin-bottom: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
 .reach-out {
-    margin-bottom: 60px;
-    font-size: 20px;
-    font-family: 'Fraunces', serif;
+  margin-bottom: 60px;
+  font-size: 20px;
+  font-family: "Fraunces", serif;
 }
 
 .contact a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }

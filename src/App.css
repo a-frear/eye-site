@@ -1,51 +1,50 @@
 body {
-    margin: 15px;
+  margin: 15px;
 }
 
-.footer{
-    display: flex;
-    margin: 0px 80px 50px 80px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+.footer {
+  display: flex;
+  margin: 0px 80px 50px 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title-img{
-    min-width: 280px;
-    max-width: 100%;
-    text-align: center;
-    margin-top: 100px;
+.title-img {
+  min-width: 280px;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .imageBox {
-    position: relative;
-    float: left;
-  }
-  
-  .imageBox .hoverImg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-  }
+  position: relative;
+  float: left;
+}
 
-  .imageInn1 {
-    display: none;
-  }
+.imageBox .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
 
-  .imageBox1 .hoverImg1 {
-    position: relative;
-    display: block;
-  }
-  
+.imageInn1 {
+  display: none;
+}
+
+.imageBox1 .hoverImg1 {
+  position: relative;
+  display: block;
+}
+
 .sore-eyes {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: black;
-    font-weight: 300;
-    color: #F73BB2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+  font-weight: 300;
+  color: #f73bb2;
 }
 
 a {
@@ -62,12 +61,12 @@ a {
 .how-to-desc {
   font-size: 24px;
   max-width: 300px;
-  border: 5px solid #F73BB2;
+  border: 5px solid #f73bb2;
   padding: 20px;
   text-align: center;
 }
 
-@media(hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .imageBox:hover .hoverImg {
     display: block;
   }
@@ -80,7 +79,7 @@ a {
     position: relative;
     float: left;
   }
-  
+
   .imageBox1 .hoverImg1 {
     position: absolute;
     left: 0;
@@ -97,37 +96,34 @@ a {
     font-weight: 100;
   }
 
-  .title-img{
+  .title-img {
     margin-top: 20px;
-}
+  }
 
-.how-to {
-  margin-top: 100px;
-}
+  .how-to {
+    margin-top: 100px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
+  .how-to {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+    margin-top: 125px;
+  }
 
-.how-to {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-transform: uppercase;
-  margin-top: 125px;
-}
-
-.how-to-desc {
-  font-size: 24px;
-  max-width: 300px;
-  border: 5px solid #F73BB2;
-  padding: 20px;
-  text-align: center;
-}
-
+  .how-to-desc {
+    font-size: 24px;
+    max-width: 300px;
+    border: 5px solid #f73bb2;
+    padding: 20px;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 900px) {
-
   .sore-eyes {
     font-size: 30px;
   }
@@ -135,8 +131,4 @@ a {
   .how-to {
     margin-top: 75px;
   }
-  
-
-  
-  }
-
+}

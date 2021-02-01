@@ -1,41 +1,40 @@
 .comment-list {
-    margin-bottom: 50px;
-    margin-top: 10px;
-    margin-left: -38px;
-    color: white;
-    font-family: 'Fraunces';
+  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-left: -38px;
+  color: white;
+  font-family: "Fraunces";
 }
 
 .comment-list-item {
-    border: 1px solid #F73BB2;
-    padding: 10px;
+  border: 1px solid #f73bb2;
+  padding: 10px;
 }
 
 #new-comment {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .comment label {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .comment-submit {
-    margin-top: 5px;
-    border: none;
-    color: black;
-    background: white;
+  margin-top: 5px;
+  border: none;
+  color: black;
+  background: white;
 }
 
 .comment-submit:hover {
-    background: #F73BB2;
+  background: #f73bb2;
 }
 
 .user-commenting {
-    color: #F73BB2;
+  color: #f73bb2;
 }
 
 .user {
-    text-transform: uppercase;
-    font-weight: lighter;
+  text-transform: uppercase;
+  font-weight: lighter;
 }
-
