@@ -37,7 +37,7 @@ const LikeButton = (props) => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    if (!likes.filter((like) => like.user_name === user.nickname)) { 
+    if (likes.filter((like) => !like.user_name === user.nickname)) { 
       e.preventDefault();
       const newLike = {
       video_id: props.vidId,
