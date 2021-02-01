@@ -19,7 +19,7 @@ Like and comment to connect with other eye lovers.
 ![Video List](/screenshots/video-list.png?raw=true)
 
 
-![Video](/screenshots/video.png)
+![Video](/screenshots/video.png?raw=true)
 
 # Built with:
 
