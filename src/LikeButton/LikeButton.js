@@ -37,7 +37,10 @@ const LikeButton = (props) => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    if (likes.filter((like) => !like.user_id === user.id)) {
+    if (likes.filter((like) => like.user_id === user.id)) {
+      e.preventDefault();
+    } else {
+      e.preventDefault();
       const newLike = {
       video_id: props.vidId,
       user_id: user.nickname
@@ -59,9 +62,9 @@ const LikeButton = (props) => {
       })
       .catch((error) => {
         console.error({ error });
-      });
+      });}
   };
-}
+
   const getLikesForVideo = (likes=[], video_id) =>
     likes.filter((like) => like.video_id === video_id);
 
@@ -78,7 +81,7 @@ const LikeButton = (props) => {
                 src={buttonSrc}
                 className="like-button"
                 id="likeVideo"
-                onClick={handleClick}
+                onClick={handleClick(e)}
               />
             </div>
           {/* <div className="imageBox">
