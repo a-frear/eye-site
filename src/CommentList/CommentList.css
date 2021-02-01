@@ -11,12 +11,12 @@
     padding: 10px;
 }
 
-#new-comment-input {
-    margin-top: 5px;
+#new-comment {
+    margin-top: 10px;
 }
 
 .comment label {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .comment-submit {
