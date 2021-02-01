@@ -32,9 +32,6 @@ class App extends React.Component {
         <Route
         path = '/contact'
         component={Contact}/>
-        <Route
-        exact path = '/'
-        component={HowTo}/>
         </section>
         <section className='footer'>
         <div className="imageBox1">
@@ -47,6 +44,9 @@ class App extends React.Component {
           <h1 className='sore-eyes'>A Site For Sore Eyes</h1>
 					</div>
           </Link>
+        <Route
+        exact path = '/'
+        component={HowTo}/>
 				</div>
         </section>
       </div>

@@ -100,6 +100,10 @@ a {
   .title-img{
     margin-top: 20px;
 }
+
+.how-to {
+  margin-top: 100px;
+}
 }
 
 @media only screen and (min-width: 600px) {
@@ -109,6 +113,7 @@ a {
   flex-direction: row;
   justify-content: space-around;
   text-transform: uppercase;
+  margin-top: 150px;
 }
 
 .how-to-desc {
@@ -121,9 +126,17 @@ a {
 
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 900px) {
+
+  .sore-eyes {
+    font-size: 30px;
+  }
 
   .how-to {
-    margin-top: -30px;
+    margin-top: 75px;
   }
+  
+
+  
   }
+
