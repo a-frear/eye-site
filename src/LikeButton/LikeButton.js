@@ -116,9 +116,9 @@ class LikeButton extends Component {
                 className="like-button"
                 id="likeVideo"
                 onClick={this.handleClick}
-              /> */}
+              /> 
             </div>
-          </div>
+          </div>*/}
         </form>
       </div>
     );
