@@ -9,6 +9,7 @@ class LikeButton extends Component {
     super();
     this.state = {
       likes: [],
+      updated: false
     };
 
     this.addLike = this.addLike.bind(this);
@@ -84,11 +85,21 @@ class LikeButton extends Component {
     const likes = this.state.likes;
     const video_id = this.props.vidId;
     const likesForVideo = this.getLikesForVideo(likes, video_id);
+    const buttonSrc = this.state.update ? likeButton : pinkLikeButton
     return (
       <div>
         <form className="like">
           <label>{likesForVideo.length} winks</label>
-          <div className="imageBox">
+          <div className="imageInn">
+              <img
+                alt="wink-icon"
+                src={buttonSrc}
+                className="like-button"
+                id="likeVideo"
+                onClick={this.handleClick}
+              />
+            </div>
+          {/* <div className="imageBox">
             <div className="imageInn">
               <img
                 alt="wink-icon"
@@ -105,7 +116,7 @@ class LikeButton extends Component {
                 className="like-button"
                 id="likeVideo"
                 onClick={this.handleClick}
-              />
+              /> */}
             </div>
           </div>
         </form>
