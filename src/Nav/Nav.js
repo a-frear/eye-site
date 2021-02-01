@@ -86,7 +86,6 @@ class Nav extends Component {
     };
   }
   handleToggle(e) {
-    e.preventDefault();
     this.setState({
       isExpanded: !this.state.isExpanded
     });
@@ -104,16 +103,16 @@ class Nav extends Component {
             onClick={e => this.handleToggle(e)}
           />
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-            <NavLink activeClassName="active" className='navigation-link' to="/videos">
+            <NavLink activeClassName="active" className='navigation-link' to="/videos" onClick={e => this.handleToggle(e)} >
               <li>Videos</li>
             </NavLink>
-            <NavLink activeClassName="active" className='navigation-link' to="/about">
+            <NavLink activeClassName="active" className='navigation-link' to="/about" onClick={e => this.handleToggle(e)} >
               <li>Why</li>
             </NavLink>
-            <NavLink activeClassName="active" className='navigation-link' to="/submit">
+            <NavLink activeClassName="active" className='navigation-link' to="/submit" onClick={e => this.handleToggle(e)}>
               <li>Submit</li>
             </NavLink>
-            <NavLink activeClassName="active" className='navigation-link' to="/contact">
+            <NavLink activeClassName="active" className='navigation-link' to="/contact" onClick={e => this.handleToggle(e)}>
               <li>Contact</li>
             </NavLink>
             <Login />
