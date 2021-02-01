@@ -27,18 +27,19 @@ const LikeButton = (props) => {
       })
       .then(setLikes)
       .catch((error) => this.setState({ error }));
+    }, []);
 
    function addLike(like) {
     if (!updated) {
       setLikes([...likes, like]);
     }
-  };
+  }
 
   const handleClick = async (e) => {
     e.preventDefault();
     if (likes.filter((like) => !like.user_id === user.id)) {
       const newLike = {
-      video_id: this.props.vidId,
+      video_id: props.vidId,
       user_id: user.nickname
     };
     fetch(config.API_ENDPOINT_likes, {
@@ -104,6 +105,6 @@ const LikeButton = (props) => {
       </div>
     );
 
-  })  }
+  }  
 
 export default LikeButton;
