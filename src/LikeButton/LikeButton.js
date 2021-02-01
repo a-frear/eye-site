@@ -45,14 +45,13 @@ class LikeButton extends Component {
   // };
 
   addLike = (like) => {
-    if(!this.state.updated) {
-        this.setState({
-          likes: [...this.state.likes, like],
-          updated: true
-           });
-      };
+    if (!this.state.updated) {
+      this.setState({
+        likes: [...this.state.likes, like],
+        updated: true,
+      });
     }
-
+  };
 
   handleClick = (e) => {
     e.preventDefault();
