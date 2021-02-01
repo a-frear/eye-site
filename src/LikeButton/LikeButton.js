@@ -1,28 +1,18 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "./LikeButton.css";
+import { useAuth0 } from "@auth0/auth0-react";
 import likeButton from "../img/white-like-button.png";
 import pinkLikeButton from "../img/pink-like-button.png";
 import config from "../config";
 
-class LikeButton extends Component {
-  constructor() {
-    super();
-    this.state = {
-      likes: [],
-      updated: false
-    };
+const LikeButton = (props) => {
 
-    this.addLike = this.addLike.bind(this);
-  }
+    const [likes, setLikes] = useState([])
+    const [updated, setUpdated]= useState(false)
+    const { user } = useAuth0();
 
-  setLikes = (likes) => {
-    this.setState({
-      likes: likes,
-      error: null,
-    });
-  };
 
-  componentDidMount() {
+  useEffect(() => {
     fetch(config.API_ENDPOINT_likes, {
       method: "GET",
       headers: {
@@ -35,29 +25,21 @@ class LikeButton extends Component {
         }
         return res.json();
       })
-      .then(this.setLikes)
+      .then(setLikes)
       .catch((error) => this.setState({ error }));
-  }
 
-  // addLike = (like) => {
-  //   this.setState({
-  //     likes: [...this.state.likes, like],
-  //   });
-  // };
-
-  addLike = (like) => {
-    if (!this.state.updated) {
-      this.setState({
-        likes: [...this.state.likes, like],
-        updated: true,
-      });
+   function addLike(like) {
+    if (!updated) {
+      setLikes([...likes, like]);
     }
   };
 
-  handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
-    const newLike = {
+    if (likes.filter((like) => !like.user_id === user.id)) {
+      const newLike = {
       video_id: this.props.vidId,
+      user_id: user.nickname
     };
     fetch(config.API_ENDPOINT_likes, {
       method: "POST",
@@ -71,21 +53,20 @@ class LikeButton extends Component {
         return res.json();
       })
       .then((like) => {
-        this.addLike(like);
+        addLike(like);
+        setUpdated(updated);
       })
       .catch((error) => {
         console.error({ error });
       });
   };
-
-  getLikesForVideo = (likes = [], video_id) =>
+}
+  const getLikesForVideo = (likes=[], video_id) =>
     likes.filter((like) => like.video_id === video_id);
 
-  render() {
-    const likes = this.state.likes;
     const video_id = this.props.vidId;
-    const likesForVideo = this.getLikesForVideo(likes, video_id);
-    const buttonSrc = this.state.updated ? pinkLikeButton : likeButton
+    const likesForVideo = getLikesForVideo(likes, video_id);
+    const buttonSrc = updated && likes.filter((like) => !like.user_id === user.id) ? pinkLikeButton : likeButton
     return (
       <div>
         <form className="like">
@@ -96,7 +77,7 @@ class LikeButton extends Component {
                 src={buttonSrc}
                 className="like-button"
                 id="likeVideo"
-                onClick={this.handleClick}
+                onClick={handleClick}
               />
             </div>
           {/* <div className="imageBox">
@@ -122,7 +103,7 @@ class LikeButton extends Component {
         </form>
       </div>
     );
-  }
-}
+
+  })  }
 
 export default LikeButton;
