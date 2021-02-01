@@ -7,7 +7,7 @@ const CommentSubmit = (props) => {
             isAuthenticated && (
             <div>
                 <form className='comment'  onSubmit={e =>props.handleSubmit(e)}> 
-                        <label>Comment as ${user.nickname}:</label>
+                        <label>Comment as {user.nickname}:</label>
                         <textarea type='text' id='new-comment' name='new-comment' required></textarea>
                         <div>
                         <button className='comment-submit'>Submit</button> 
