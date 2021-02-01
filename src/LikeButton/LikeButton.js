@@ -11,6 +11,8 @@ const LikeButton = (props) => {
     const [updated, setUpdated]= useState(false)
     const { user, isAuthenticated } = useAuth0();
 
+    console.log(likes)
+
 
   useEffect(() => {
     fetch(config.API_ENDPOINT_likes, {
@@ -37,7 +39,6 @@ const LikeButton = (props) => {
 
   const findUserLikes = likes.filter((like) => like.user_name === user.nickname)
   console.log(findUserLikes)
-  console.log(likes)
 
   const handleClick = async (e) => {
     e.preventDefault();
