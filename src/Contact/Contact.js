@@ -10,14 +10,14 @@ class Contact extends React.Component {
                         <legend>Contact:</legend>
                         <div>
                             <label for="name">Name:</label>
-                            <input id="name" type="text" name="name"/>
+                            <input id="name" type="text" name="name" required/>
                             <div>
-                                <label for="email-form">Email:</label>
-                                <input id="email-form" type="text" name="email"/>
+                                <label for="email">Email:</label>
+                                <input id="email" type="email" name="email" required/>
                             </div>
                             <div>
                                 <label for="message">Message:</label>
-                                <textarea id="message" name="message"></textarea>
+                                <textarea id="message" name="message" type="text" required></textarea>
                             </div>
                         </div>
                     <button type="submit">Submit</button>
