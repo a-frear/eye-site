@@ -35,9 +35,11 @@ const LikeButton = (props) => {
     }
   }
 
+  const findUserLikes = likes.filter((like) => like.user_name === user.nickname)
+
   const handleClick = async (e) => {
     e.preventDefault();
-    if (likes.filter((like) => like.user_name === user.nickname).length === 0) { 
+    if (findUserLikes.length === 1) { 
       e.preventDefault();
       const newLike = {
       video_id: props.vidId,
@@ -69,7 +71,7 @@ const LikeButton = (props) => {
 
     const video_id = props.vidId;
     const likesForVideo = getLikesForVideo(likes, video_id);
-    const buttonSrc = likesForVideo.filter((like) => like.user_name === user.nickname).length === 0 ? likeButton : pinkLikeButton 
+    const buttonSrc = findUserLikes.length === 0 ? likeButton : pinkLikeButton 
     return ( isAuthenticated && (
       <div>
         <form className="like">
