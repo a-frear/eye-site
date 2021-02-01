@@ -9,7 +9,7 @@ const LikeButton = (props) => {
 
     const [likes, setLikes] = useState([])
     const [updated, setUpdated]= useState(false)
-    const { user } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
 
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const LikeButton = (props) => {
     const video_id = this.props.vidId;
     const likesForVideo = getLikesForVideo(likes, video_id);
     const buttonSrc = updated && likes.filter((like) => !like.user_id === user.id) ? pinkLikeButton : likeButton
-    return (
+    return ( isAuthenticated && (
       <div>
         <form className="like">
           <label>{likesForVideo.length} winks</label>
@@ -102,7 +102,7 @@ const LikeButton = (props) => {
             </div>
           </div>*/}
         </form>
-      </div>
+      </div>)
     );
 
   }  
