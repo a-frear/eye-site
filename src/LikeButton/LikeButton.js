@@ -38,11 +38,21 @@ class LikeButton extends Component {
       .catch((error) => this.setState({ error }));
   }
 
+  // addLike = (like) => {
+  //   this.setState({
+  //     likes: [...this.state.likes, like],
+  //   });
+  // };
+
   addLike = (like) => {
-    this.setState({
-      likes: [...this.state.likes, like],
-    });
-  };
+    if(!this.state.updated) {
+        this.setState({
+          likes: [...this.state.likes, like],
+          updated: true
+           });
+      };
+    }
+
 
   handleClick = (e) => {
     e.preventDefault();
