@@ -26,6 +26,10 @@
     background: #F73BB2;
 }
 
+.user-commenting {
+    color: #F73BB2;
+}
+
 .user {
     text-transform: uppercase;
     font-weight: lighter;
