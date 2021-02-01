@@ -7,9 +7,10 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
+    font-size: 1.5em;
 }
 
-fieldset{
+.contact fieldset{
     padding: 10px 12px;
     border: 3px solid  #F73BB2;
     margin-top: 35px;
@@ -20,19 +21,17 @@ fieldset{
   
 .contact legend {
     border: none;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .contact label {
     display: block;
-    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
   
 .contact textarea {
     height: 4.75rem;
-    font-size: 16px;
     margin-bottom: 20px;
 }
 

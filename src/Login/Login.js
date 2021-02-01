@@ -10,7 +10,7 @@ const Login = () => {
       <div className='login'>
       <p className='auth-link' onClick={() => loginWithRedirect()}>
         Log In
-      </p>
+        </p>
       </div>
     )
   )
