@@ -70,7 +70,7 @@ const LikeButton = (props) => {
 
     const video_id = props.vidId;
     const likesForVideo = getLikesForVideo(likes, video_id);
-    const buttonSrc = likesForVideo.filter((like) => !like.user_id === user.id) ? pinkLikeButton : likeButton
+    const buttonSrc = likesForVideo.filter((like) => !like.user_name === user.nickname) ? pinkLikeButton : likeButton
     return ( isAuthenticated && (
       <div>
         <form className="like">
