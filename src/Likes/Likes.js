@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./LikeButton.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import likeButton from "../img/white-like-button.png";
-import pinkLikeButton from "../img/pink-like-button.png";
+import LikeButton from '../LikeButton/LikeButton';
 import config from "../config";
 
 const Likes = (props) => {

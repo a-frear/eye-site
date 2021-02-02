@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import likeButton from "../img/white-like-button.png";
 import pinkLikeButton from "../img/pink-like-button.png";
 
-const Likes = (props) => {
+const LikeButton = (props) => {
   const [likes ] = useState(props.likes);
   const { user, isAuthenticated } = useAuth0();
 
@@ -29,4 +29,4 @@ const Likes = (props) => {
   );
 };
 
-export default Likes;
+export default LikeButton;
