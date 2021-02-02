@@ -5,7 +5,7 @@ import likeButton from "../img/white-like-button.png";
 import pinkLikeButton from "../img/pink-like-button.png";
 import config from "../config";
 
-const LikeButton = (props) => {
+const Likes = (props) => {
   const [likes, setLikes] = useState([]);
   const [updated, setUpdated] = useState(false);
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
@@ -116,4 +116,4 @@ const LikeButton = (props) => {
   );
 };
 
-export default LikeButton;
+export default Likes;

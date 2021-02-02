@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../Modal/Modal";
 import "./VideoListItem.css";
-import LikeButton from "../LikeButton/LikeButton";
+import Likes from "../Likes/Likes";
 import Comments from "../Comments/Comments";
 
 class VideoListItem extends React.Component {
@@ -70,7 +70,7 @@ class VideoListItem extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <LikeButton vidId={this.props.id} />
+                <Likes vidId={this.props.id} />
                 <Comments vidId={this.props.id} />
                 <div className="subtitle">
                   <hr className="break" />
