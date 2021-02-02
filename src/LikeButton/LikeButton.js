@@ -22,7 +22,7 @@ const LikeButton = (props) => {
               src={buttonSrc}
               className="like-button"
               id="likeVideo"
-              onClick={props.handleClick()}
+              onClick={(e) => props.handleClick(e)}
             />
     )
   );
