@@ -58,13 +58,6 @@ const Comments = (props) => {
 
   return (
     <div>
-      {/* <form className='comment'  onSubmit={e =>handleSubmit(e)}> 
-                    <label>Comment:</label>
-                    <textarea type='text' id='new-comment' name='new-comment' required></textarea>
-                    <div>
-                    <button className='comment-submit'>Submit</button> 
-                    </div>
-                </form> */}
       <CommentSubmit handleSubmit={handleSubmit} />
       <CommentList comments={comments} vidId={props.vidId} />
     </div>

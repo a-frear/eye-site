@@ -4,7 +4,6 @@ import config from "../config";
 
 const Likes = (props) => {
   const [likes, setLikes] = useState([]);
-  // const [updated, setUpdated] = useState(false);
 
   useEffect(() => {
     fetch(config.API_ENDPOINT_likes, {
@@ -43,26 +42,6 @@ const Likes = (props) => {
             addLike={addLike}
           />
         </div>
-        {/* <div className="imageBox">
-            <div className="imageInn">
-              <img
-                alt="wink-icon"
-                src={likeButton}
-                className="like-button"
-                id="likeVideo"
-                onClick={this.handleClick}
-              />
-            </div>
-            <div className="hoverImg">
-              <img
-                alt="wink-icon-pink"
-                src={pinkLikeButton}
-                className="like-button"
-                id="likeVideo"
-                onClick={this.handleClick}
-              /> 
-            </div>
-          </div>*/}
       </form>
     </div>
   );
