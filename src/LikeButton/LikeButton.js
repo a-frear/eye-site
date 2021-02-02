@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import likeButton from "../img/white-like-button.png";
 import pinkLikeButton from "../img/pink-like-button.png";
 import config from "../config";
 
 const LikeButton = (props) => {
-  const [likes ] = useState(props.likes);
+  const [likes, setLikes ] = useState([]);
+  const [updated, setUpdated ] = useState(false);
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
 
-  console.log(likes)
+  useEffect(() => {
+    fetch(config.API_ENDPOINT_likes, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
+      .then(setLikes)
+      .catch();
+  }, []);
+
 
   const findUserLikes = likes.filter(
     (like) => like.user_name === user.nickname
@@ -19,6 +36,7 @@ const LikeButton = (props) => {
 
 const handleClick = async (e) => {
   e.preventDefault();
+  if (!updated){
   if (findUserLikesThisVideo.length === 0) {
     const newLike = {
       video_id: props.vidId,
@@ -40,13 +58,14 @@ const handleClick = async (e) => {
       .then((like) => {
         props.addLike(like);
       })
+      .then(setUpdated(true))
       .catch((error) => {
         console.error({ error });
       });
-  }
+  }}
 };
 
-  const buttonSrc = findUserLikesThisVideo.length === 0 ? likeButton : pinkLikeButton;
+  const buttonSrc = findUserLikesThisVideo.length === 0 && !updated ? likeButton : pinkLikeButton;
   return (
     isAuthenticated && (
             <img
