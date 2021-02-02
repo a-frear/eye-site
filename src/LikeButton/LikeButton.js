@@ -82,7 +82,7 @@ function buttonImage(){
     isAuthenticated && (
             <img
               alt="wink-icon"
-              src={buttonImage}
+              src={buttonImage()}
               className="like-button"
               id="likeVideo"
               onClick={(e) => handleClick(e)}
