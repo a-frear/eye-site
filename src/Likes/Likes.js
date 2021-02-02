@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Likes.css";
 import LikeButton from "../LikeButton/LikeButton";
 import config from "../config";
 
