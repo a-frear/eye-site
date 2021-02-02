@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Likes.css";
-import LikeButton from '../LikeButton/LikeButton';
+import LikeButton from "../LikeButton/LikeButton";
 import config from "../config";
 
 const Likes = (props) => {
@@ -26,7 +26,7 @@ const Likes = (props) => {
 
   function addLike(like) {
     setLikes([...likes, like]);
-}
+  }
 
   const getLikesForVideo = (likes = [], video_id) =>
     likes.filter((like) => like.video_id === video_id);
@@ -34,13 +34,17 @@ const Likes = (props) => {
   const video_id = props.vidId;
   const likesForVideo = getLikesForVideo(likes, video_id);
   return (
-      <div>
-        <form className="like">
-          <label>{likesForVideo.length} winks</label>
-          <div>
-          <LikeButton vidId={props.vidId} likes={likesForVideo} addLike={addLike} />
-          </div>
-          {/* <div className="imageBox">
+    <div>
+      <form className="like">
+        <label>{likesForVideo.length} winks</label>
+        <div>
+          <LikeButton
+            vidId={props.vidId}
+            likes={likesForVideo}
+            addLike={addLike}
+          />
+        </div>
+        {/* <div className="imageBox">
             <div className="imageInn">
               <img
                 alt="wink-icon"
@@ -60,8 +64,8 @@ const Likes = (props) => {
               /> 
             </div>
           </div>*/}
-        </form>
-      </div>
+      </form>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Likes from "./Likes"
+import Likes from "./Likes";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
