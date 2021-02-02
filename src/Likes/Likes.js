@@ -31,13 +31,13 @@ const Likes = (props) => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    const { user, getAccessTokenSilently } = useAuth0
     const findUserLikes = likes.filter(
       (like) => like.user_name === user.nickname
     );
     const findUserLikesThisVideo = findUserLikes.filter(
       (like) => like.video_id === props.vidId
     )
-    const { user, getAccessTokenSilently } = useAuth0
     if (findUserLikesThisVideo.length === 0) {
       e.preventDefault();
       const token = await getAccessTokenSilently();
