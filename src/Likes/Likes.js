@@ -26,9 +26,7 @@ const Likes = (props) => {
   }, []);
 
   function addLike(like) {
-    if (!updated) {
       setLikes([...likes, like]);
-    }
   }
 
   const handleClick = async (e) => {
