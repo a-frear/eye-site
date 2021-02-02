@@ -38,7 +38,7 @@ const Likes = (props) => {
         <form className="like">
           <label>{likesForVideo.length} winks</label>
           <div>
-          <LikeButton vidId={props.vidId} likes={likes} addLike={addLike} />
+          <LikeButton vidId={props.vidId} likes={likesForVideo} addLike={addLike} />
           </div>
           {/* <div className="imageBox">
             <div className="imageInn">
