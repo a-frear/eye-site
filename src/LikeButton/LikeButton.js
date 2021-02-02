@@ -8,7 +8,7 @@ const LikeButton = (props) => {
   const [likes ] = useState(props.likes);
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
 
-  console.log("like button state likes" + likes)
+  console.log(likes)
 
   const findUserLikes = likes.filter(
     (like) => like.user_name === user.nickname
