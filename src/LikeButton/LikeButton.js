@@ -33,13 +33,15 @@ const LikeButton = (props) => {
     }
   }
 
-  const findUserLikes = likes.filter(
-    (like) => like.user_name === user.nickname
-  );
-
   const handleClick = async (e) => {
     e.preventDefault();
-    if (findUserLikes.length === 0) {
+    const findUserLikes = likes.filter(
+      (like) => like.user_name === user.nickname
+    );
+    const findUserLikesThisVideo = findUserLikes.filter(
+      (like) => like.video_id === props.vidId
+    )
+    if (findUserLikesThisVideo.length === 0) {
       e.preventDefault();
       const token = await getAccessTokenSilently();
       const newLike = {
@@ -73,7 +75,7 @@ const LikeButton = (props) => {
 
   const video_id = props.vidId;
   const likesForVideo = getLikesForVideo(likes, video_id);
-  const buttonSrc = findUserLikes.length === 0 ? likeButton : pinkLikeButton;
+  const buttonSrc = getLikesForVideo.length === 0 ? likeButton : pinkLikeButton;
   return (
     isAuthenticated && (
       <div>
