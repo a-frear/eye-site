@@ -7,8 +7,7 @@ import config from "../config";
 
 const Likes = (props) => {
   const [likes, setLikes] = useState([]);
-  const [updated, setUpdated] = useState(false);
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  // const [updated, setUpdated] = useState(false);
 
   useEffect(() => {
     fetch(config.API_ENDPOINT_likes, {
@@ -41,6 +40,7 @@ const Likes = (props) => {
     const findUserLikesThisVideo = findUserLikes.filter(
       (like) => like.video_id === props.vidId
     )
+    const { user, getAccessTokenSilently } = useAuth0
     if (findUserLikesThisVideo.length === 0) {
       e.preventDefault();
       const token = await getAccessTokenSilently();
@@ -62,7 +62,6 @@ const Likes = (props) => {
         })
         .then((like) => {
           addLike(like);
-          setUpdated(updated);
         })
         .catch((error) => {
           console.error({ error });
@@ -75,20 +74,12 @@ const Likes = (props) => {
 
   const video_id = props.vidId;
   const likesForVideo = getLikesForVideo(likes, video_id);
-  const buttonSrc = getLikesForVideo.length === 0 ? likeButton : pinkLikeButton;
   return (
-    isAuthenticated && (
       <div>
         <form className="like">
           <label>{likesForVideo.length} winks</label>
           <div>
-            <img
-              alt="wink-icon"
-              src={buttonSrc}
-              className="like-button"
-              id="likeVideo"
-              onClick={handleClick}
-            />
+          <LikeButton vidId={props.vidId} likes={likes} handleClick={handleClick}/>
           </div>
           {/* <div className="imageBox">
             <div className="imageInn">
@@ -112,7 +103,6 @@ const Likes = (props) => {
           </div>*/}
         </form>
       </div>
-    )
   );
 };
 
