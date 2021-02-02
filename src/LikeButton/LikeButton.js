@@ -6,13 +6,9 @@ import pinkLikeButton from "../img/pink-like-button.png";
 import config from "../config";
 
 const LikeButton = (props) => {
-
-    const [likes, setLikes] = useState([])
-    const [updated, setUpdated]= useState(false)
-    const { user, isAuthenticated } = useAuth0();
-
-    console.log(likes)
-
+  const [likes, setLikes] = useState([]);
+  const [updated, setUpdated] = useState(false);
+  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
 
   useEffect(() => {
     fetch(config.API_ENDPOINT_likes, {
@@ -29,65 +25,69 @@ const LikeButton = (props) => {
       })
       .then(setLikes)
       .catch();
-    }, []);
+  }, []);
 
-   function addLike(like) {
+  function addLike(like) {
     if (!updated) {
       setLikes([...likes, like]);
     }
   }
 
-  const findUserLikes = likes.filter((like) => like.user_name === user.nickname)
-  console.log(findUserLikes)
+  const findUserLikes = likes.filter(
+    (like) => like.user_name === user.nickname
+  );
 
   const handleClick = async (e) => {
     e.preventDefault();
-    if (findUserLikes.length === 0) { 
+    if (findUserLikes.length === 0) {
       e.preventDefault();
+      const token = await getAccessTokenSilently();
       const newLike = {
-      video_id: props.vidId,
-      user_name: user.nickname
-    };
-    fetch(config.API_ENDPOINT_likes, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newLike),
-    })
-      .then((res) => {
-        if (!res.ok) return res.json().then((e) => Promise.reject(e));
-        return res.json();
+        video_id: props.vidId,
+        user_name: user.nickname,
+      };
+      fetch(config.API_ENDPOINT_likes, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(newLike),
       })
-      .then((like) => {
-        addLike(like);
-        setUpdated(updated);
-      })
-      .catch((error) => {
-        console.error({ error });
-      });}
+        .then((res) => {
+          if (!res.ok) return res.json().then((e) => Promise.reject(e));
+          return res.json();
+        })
+        .then((like) => {
+          addLike(like);
+          setUpdated(updated);
+        })
+        .catch((error) => {
+          console.error({ error });
+        });
     }
+  };
 
-
-  const getLikesForVideo = (likes=[], video_id) =>
+  const getLikesForVideo = (likes = [], video_id) =>
     likes.filter((like) => like.video_id === video_id);
 
-    const video_id = props.vidId;
-    const likesForVideo = getLikesForVideo(likes, video_id);
-    const buttonSrc = findUserLikes.length === 0 ? likeButton : pinkLikeButton 
-    return ( isAuthenticated && (
+  const video_id = props.vidId;
+  const likesForVideo = getLikesForVideo(likes, video_id);
+  const buttonSrc = findUserLikes.length === 0 ? likeButton : pinkLikeButton;
+  return (
+    isAuthenticated && (
       <div>
         <form className="like">
           <label>{likesForVideo.length} winks</label>
           <div>
-              <img
-                alt="wink-icon"
-                src={buttonSrc}
-                className="like-button"
-                id="likeVideo"
-                onClick={handleClick}
-              />
-            </div>
+            <img
+              alt="wink-icon"
+              src={buttonSrc}
+              className="like-button"
+              id="likeVideo"
+              onClick={handleClick}
+            />
+          </div>
           {/* <div className="imageBox">
             <div className="imageInn">
               <img
@@ -109,9 +109,9 @@ const LikeButton = (props) => {
             </div>
           </div>*/}
         </form>
-      </div>)
-    );
-
-  }  
+      </div>
+    )
+  );
+};
 
 export default LikeButton;
