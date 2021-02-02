@@ -25,18 +25,18 @@ const LikeButton = (props) => {
       .then(setLikes)
       .catch();
   }, []);
+      
 
-
-  const findUserLikes = likes.filter(
-    (like) => like.user_name === user.nickname
-  );
-  const findUserLikesThisVideo = findUserLikes.filter(
-    (like) => like.video_id === props.vidId
-  )
 
 const handleClick = async (e) => {
   e.preventDefault();
   if (!updated){
+    const findUserLikes = likes.filter(
+        (like) => like.user_name === user.nickname
+      );
+      const findUserLikesThisVideo = findUserLikes.filter(
+        (like) => like.video_id === props.vidId
+      )
   if (findUserLikesThisVideo.length === 0) {
     const newLike = {
       video_id: props.vidId,
@@ -65,12 +65,24 @@ const handleClick = async (e) => {
   }}
 };
 
-  const buttonSrc = findUserLikesThisVideo.length === 0 && !updated ? likeButton : pinkLikeButton;
+function buttonImage(){
+    const findUserLikes = likes.filter(
+        (like) => like.user_name === user.nickname
+      );
+      const findUserLikesThisVideo = findUserLikes.filter(
+        (like) => like.video_id === props.vidId
+      )
+      const buttonSrc = findUserLikesThisVideo.length === 0 && !updated ? likeButton : pinkLikeButton;
+      console.log(buttonSrc)
+      return buttonSrc
+}
+
+
   return (
     isAuthenticated && (
             <img
               alt="wink-icon"
-              src={buttonSrc}
+              src={buttonImage}
               className="like-button"
               id="likeVideo"
               onClick={(e) => handleClick(e)}
