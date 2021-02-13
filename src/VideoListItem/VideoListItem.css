@@ -76,10 +76,7 @@ iframe {
   color: white;
   font-size: 20px;
   font-weight: lighter;
-}
-
-.like-button {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .comment {
