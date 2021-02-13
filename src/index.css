@@ -12,7 +12,7 @@ code {
 
 body {
   margin: 0;
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", Helvetica;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

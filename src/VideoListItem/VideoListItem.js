@@ -75,7 +75,7 @@ class VideoListItem extends React.Component {
                 <div className="subtitle">
                   <hr className="break" />
                   <h4 id="author">VIDEO BY {this.props.author}</h4>
-                </div>
+                </div> 
               </div>
             </div>
           </Modal>

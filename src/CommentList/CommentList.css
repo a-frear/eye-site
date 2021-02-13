@@ -7,7 +7,7 @@
 }
 
 .comment-list-item {
-  border: 1px solid #f73bb2;
+  border: 1px solid #D1D646;
   padding: 10px;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .comment-submit:hover {
-  background: #f73bb2;
+  background: #52d1dc;
 }
 
 .user-commenting {
@@ -37,4 +37,8 @@
 .user {
   text-transform: uppercase;
   font-weight: lighter;
+}
+
+.num-winks {
+  color: #52d1dc
 }

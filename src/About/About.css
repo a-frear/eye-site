@@ -3,8 +3,8 @@
 }
 
 .about-img {
-  min-width: 280px;
   max-width: 100%;
+  width: 800px;
   margin: 0 auto;
   margin-top: 30px;
 }
@@ -17,6 +17,13 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.name {
+  color: #eb6534;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 600px) {

@@ -36,6 +36,7 @@ class Videos extends React.Component {
   render() {
     return (
       <div className="eyes">
+        <h3 className='touch-eye'>TOUCH AN EYE</h3>
         <ul className="video__list" aria-live="polite">
           {this.state.videos.map((video) => (
             <VideoListItem
