@@ -8,14 +8,7 @@ class About extends React.Component {
       <section className="About">
         {/* <img src={rachelStill} alt="eye-practice" className="about-img"/> */}
         <p className="about-paragraph">
-          "I’m never seen as an individual. Always a pair. But I’m my own eye. I have my own
-          needs, my own dreams, my own life. I’m always the one expected
-          to be doing the seeing, but I can’t even remember the last time anyone
-          saw me. Like, ACTUALLY saw me. 
-          <br />
-          <br />
-          And I was feeling all of this before
-          2020! This year my workload has been double. Mouth and nose aren’t
+          "This year my workload has been double. Mouth and nose aren’t
           allowed to be seen in public anymore. So I’ve been doing double duty
           in terms of seeing and expressing. People are relying on me for a
           smile instead of mouth, and I don’t even know if I’m doing a good job
