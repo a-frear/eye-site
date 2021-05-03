@@ -7,7 +7,7 @@
 }
 
 .auth-link:hover {
-  color: #E24E1B;
+  color: #f73bb2;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -16,7 +16,7 @@
     text-transform: uppercase;
     font-size: 38px;
     color: white;
-    background: #E24E1B;
+    background: #f73bb2;
     padding: 10px;
     margin-left: 10px;
     margin-top: 20px;
