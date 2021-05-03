@@ -37,7 +37,7 @@ const Navigation = styled.header`
 }
 
 li:hover {
-    color: #E24E1B;
+    color: #f73bb2;
 }
 
 
