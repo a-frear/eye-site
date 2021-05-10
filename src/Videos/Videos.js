@@ -2,17 +2,20 @@ import React from "react";
 import "./Videos.css";
 import VideoListItem from "../VideoListItem/VideoListItem";
 import config from "../config";
+import LoadingContainer from "../LoadingContainer/LoadingContainer";
 
 class Videos extends React.Component {
   state = {
     videos: [],
     error: null,
+    loading: true,
   };
 
   setVideos = (videos) => {
     this.setState({
       videos,
       error: null,
+      loading: false
     });
   };
 
@@ -34,6 +37,7 @@ class Videos extends React.Component {
   }
 
   render() {
+    if (this.state.loading) return <div className="loading"> <LoadingContainer color='#f73bb2' /> </div>;
     return (
       <div className="eyes">
         <h3 className='touch-eye'>TOUCH AN EYE</h3>
