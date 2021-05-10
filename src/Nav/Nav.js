@@ -5,12 +5,10 @@ import Login from "../Login/Login";
 import Logout from "../Logout/Logout";
 
 class Nav extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+    state = {
       isExpanded: false,
     };
-  }
+    
   handleToggle(e) {
     this.setState({
       isExpanded: !this.state.isExpanded,
