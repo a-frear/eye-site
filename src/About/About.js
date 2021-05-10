@@ -6,7 +6,15 @@ class About extends React.Component {
   render() {
     return (
       <section className="About">
-        {/* <img src={rachelStill} alt="eye-practice" className="about-img"/> */}
+      <iframe
+        width="560"
+        height="315"
+        title="video"
+        src="https://player.vimeo.com/video/547280824?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
         <p className="about-paragraph">
           "This year my workload has been double. Mouth and nose aren’t
           allowed to be seen in public anymore. So I’ve been doing double duty
