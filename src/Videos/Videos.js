@@ -2,7 +2,7 @@ import React from "react";
 import "./Videos.css";
 import VideoListItem from "../VideoListItem/VideoListItem";
 import config from "../config";
-import { CommonLoading } from 'react-loadingg';
+import LoadingContainer from "../LoadingContainer/LoadingContainer"
 
 class Videos extends React.Component {
   state = {
@@ -38,7 +38,7 @@ class Videos extends React.Component {
     return (
       <div className="eyes">
         <div className='loading'>
-          <CommonLoading color='#f73bb2' />
+          <LoadingContainer />
         </div>
         <h3 className='touch-eye'>TOUCH AN EYE</h3>
         <ul className="video__list" aria-live="polite">
