@@ -37,9 +37,10 @@ class Videos extends React.Component {
   }
 
   render() {
-    if (this.state.loading) return <div className="loading"> <LoadingContainer color='#f73bb2' /> </div>;
+    if (this.state.loading) return <div className="loading"> <LoadingContainer /> </div>;
     return (
       <div className="eyes">
+        {/* for mobile when there is no hover effect */}
         <h3 className='touch-eye'>TOUCH AN EYE</h3>
         <ul className="video__list" aria-live="polite">
           {this.state.videos.map((video) => (
