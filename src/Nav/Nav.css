@@ -47,7 +47,7 @@ li:hover {
       right: 10px;
       cursor: pointer;
     }
-    ul.collapsed {
+    .nav ul.collapsed {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -58,12 +58,12 @@ li:hover {
     }
       
 
-    ul.is-expanded {
+    .nav ul.is-expanded {
         overflow: hidden;
         max-height: 500px; /* approximate max height */
       }
 
-      li {
+      .nav li {
         padding: 15px 10px;
         margin: 0px 0px;
         width: 100%;
