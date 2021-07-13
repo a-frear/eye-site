@@ -1,8 +1,12 @@
 .video__list {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150, 1fr));
+  justify-items: center;
   align-items: center;
   margin-top: 30px;
 }
