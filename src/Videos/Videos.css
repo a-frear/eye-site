@@ -1,12 +1,8 @@
 .video__list {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   justify-items: center;
+  grid-gap: 20px;
   align-items: center;
   margin-top: 30px;
   margin-left: -45px;
